@@ -1,1 +1,3 @@
-# dotfiles managed by stow
+# dotfiles 
+
+dotfiles managed by stow
