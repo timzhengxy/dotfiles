@@ -5,18 +5,20 @@ call plug#end()
 let g:ycm_global_ycm_extra_conf = '~/.config/nvim/ycm_global_extra_conf.py'
 let g:ycm_enable_diagnostic_signs=0
 
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal! g'\"" | endif
-endif
+"if has("autocmd")
+"  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+"    \| exe "normal! g'\"" | endif
+"endif
+
+
+syntax on
+set shortmess+=I
+colorscheme monokai
 
 set completeopt-=preview
 
 set noswapfile
 set confirm
-
-syntax enable
-colorscheme monokai
 
 set softtabstop=4
 set shiftwidth=4
@@ -25,6 +27,8 @@ set expandtab
 set smartindent
 set foldmethod=syntax
 set foldlevel=99
+set ignorecase
+set smartcase
 
 hi clear SpellBad
 hi SpellBad cterm=undercurl,bold
