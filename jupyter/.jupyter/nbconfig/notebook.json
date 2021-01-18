@@ -1,0 +1,42 @@
+{
+  "keys": {
+    "edit": {
+      "unbind": [
+        "esc"
+      ],
+      "bind": {
+        "ctrl-[": "jupyter-notebook:enter-command-mode"
+      }
+    },
+    "command": {
+      "unbind": [
+        "enter",
+        "shift-v",
+        "v",
+        "c",
+        "x",
+        "up",
+        "down",
+        "shift-up",
+        "shift-down",
+        "z",
+        "ctrl-enter",
+        "b",
+        "a"
+      ],
+      "bind": {
+        "i": "jupyter-notebook:enter-edit-mode",
+        "p": "jupyter-notebook:paste-cell-below",
+        "shift-p": "jupyter-notebook:paste-cell-above",
+        "y": "jupyter-notebook:copy-cell",
+        "d": "jupyter-notebook:cut-cell",
+        "u": "jupyter-notebook:undo-cell-deletion",
+        "c": "jupyter-notebook:change-cell-to-code",
+        "o": "jupyter-notebook:insert-cell-below",
+        "shift-o": "jupyter-notebook:insert-cell-above",
+        "ctrl-l": "jupyter-notebook:clear-cell-output",
+        "enter": "jupyter-notebook:run-cell"
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 let g:ycm_global_ycm_extra_conf = '~/.config/nvim/ycm_global_extra_conf.py'
