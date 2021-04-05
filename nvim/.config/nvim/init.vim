@@ -6,10 +6,10 @@ call plug#end()
 let g:ycm_global_ycm_extra_conf = '~/.config/nvim/ycm_global_extra_conf.py'
 let g:ycm_enable_diagnostic_signs=0
 
-"if has("autocmd")
-"  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-"    \| exe "normal! g'\"" | endif
-"endif
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
 
 
 syntax on
@@ -33,6 +33,12 @@ set smartcase
 
 hi clear SpellBad
 hi SpellBad cterm=undercurl,bold
+
+"ycm list errors"
+let g:ycm_always_populate_location_list = 1
+
+"let g:python3_host_prog="/home/tim/.virtualenvs/cs41-env/bin/python"
+let g:python3_host_prog="/usr/bin/python3"
 
 set number
 set clipboard+=unnamedplus
