@@ -1,6 +1,9 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 let g:ycm_global_ycm_extra_conf = '~/.config/nvim/ycm_global_extra_conf.py'
@@ -46,3 +49,8 @@ autocmd filetype cpp nnoremap <F8> :w <bar> !g++ -std=c++17 % -o %:r -fsanitize=
 autocmd filetype cpp inoremap <F8> <Esc> :w <bar> !g++ -std=c++17 % -o %:r -fsanitize=address -fsanitize=undefined -DLOCAL <CR>
 autocmd filetype cpp nnoremap <F9> :w <bar> !make test <CR>
 autocmd filetype cpp inoremap <F9> <Esc> :w <bar> !make test <CR>
+vmap <Space> <Plug>RDSendSelection
+nmap <Space> <Plug>RDSendLine
+"fzf
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <M-p> :Buffers<CR>

@@ -1,13 +1,5 @@
 {
   "keys": {
-    "edit": {
-      "unbind": [
-        "esc"
-      ],
-      "bind": {
-        "ctrl-[": "jupyter-notebook:enter-command-mode"
-      }
-    },
     "command": {
       "unbind": [
         "enter",
@@ -38,5 +30,10 @@
         "enter": "jupyter-notebook:run-cell"
       }
     }
+  },
+  "load_extensions": {
+    "nbextensions_configurator/config_menu/main": true,
+    "contrib_nbextensions_help_item/main": true,
+    "vim_binding/vim_binding": true
   }
 }
